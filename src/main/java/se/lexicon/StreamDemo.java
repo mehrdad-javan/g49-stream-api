@@ -3,7 +3,9 @@ package se.lexicon;
 import se.lexicon.model.Gender;
 import se.lexicon.model.Person;
 
+import java.lang.reflect.Array;
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
@@ -12,7 +14,7 @@ public class StreamDemo {
 
     public static List<Person> createPersonList() {
 
-        return List.of(
+        return Arrays.asList(
                 new Person("Alice", "Johnsson", Gender.F, LocalDate.parse("1990-05-15"), true),
                 new Person("Bob", "Smith", Gender.M, LocalDate.parse("1985-08-20"), false),
                 new Person("Emily", "Davis", Gender.F, LocalDate.parse("1993-02-10"), true),
